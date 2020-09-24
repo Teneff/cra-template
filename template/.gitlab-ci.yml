@@ -1,0 +1,37 @@
+image: node:alpine
+
+before_script:
+  - yarn install --frozen-lockfile
+
+stages:
+  - prep
+  - test
+  - build
+  - deploy
+
+lint:
+  stage: test
+  script:
+    - yarn lint
+  except:
+    - master
+
+build:
+  stage: build
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - packages/frontend/dist
+
+pages:
+  stage: deploy
+  script:
+    - mv packages/frontend/dist/ public/
+  artifacts:
+    paths:
+    - public
+  only:
+    refs:
+      - master
+  when: manual
