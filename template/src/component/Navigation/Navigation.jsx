@@ -28,13 +28,7 @@ const Navigation = () => {
             {process.env.REACT_APP_WEBSITE_NAME}
           </Link>
         </Typography>
-        <Link
-          component={RouterLink}
-          to="/feedback"
-          color="inherit"
-          variant="h6"
-          noWrap
-        >
+        <Link component={RouterLink} to="/feedback" color="inherit" variant="h6" noWrap>
           feedback
         </Link>
       </Toolbar>

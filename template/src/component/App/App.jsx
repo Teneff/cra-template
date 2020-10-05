@@ -7,7 +7,7 @@ import { store, history } from '../../redux/store';
 
 import * as Page from '../../page';
 import Navigation from '../Navigation';
-import Footer from '../../component/Footer';
+import Footer from '../Footer';
 
 function App() {
   return (
