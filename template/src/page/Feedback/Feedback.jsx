@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 import FeedbackForm from '../../component/FeedbackForm';
 
 const validate = (values) => {
-  console.info(values);
   const errors = {};
   if (!values.bio) {
     errors.bio = 'Please enter bio';
@@ -60,19 +59,21 @@ const Feedback = ({ loading, onLoad, onFormSubmit }) => {
           </Card>
         </Grid>
         <Grid item md={6}>
-          <FeedbackForm
-            loading={loading}
-            onFormSubmit={onFormSubmit}
-            validate={validate}
-          />
+          <FeedbackForm loading={loading} onFormSubmit={onFormSubmit} validate={validate} />
         </Grid>
       </Grid>
     </Container>
   );
 };
 
+Feedback.defaultProps = {
+  loading: true,
+};
+
 Feedback.propTypes = {
+  loading: PropTypes.bool,
   onLoad: PropTypes.func.isRequired,
+  onFormSubmit: PropTypes.func.isRequired,
 };
 
 export default Feedback;

@@ -12,7 +12,5 @@ const middlewareHistoryRouter = routerMiddleware(history);
 
 export const store = createStore(
   createRootReducer(history),
-  composeWithDevTools(
-    applyMiddleware(middlewareHistoryRouter, googleAnalytics),
-  ),
+  composeWithDevTools(applyMiddleware(middlewareHistoryRouter, googleAnalytics)),
 );

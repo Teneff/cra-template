@@ -2,12 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import FormControl from '@material-ui/core/FormControl';
-import {
-  InputLabel,
-  OutlinedInput,
-  FormHelperText,
-  Button,
-} from '@material-ui/core';
+import { InputLabel, OutlinedInput, FormHelperText, Button } from '@material-ui/core';
 import { Form, Field } from 'react-final-form';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
@@ -48,12 +43,7 @@ const FeedbackForm = ({ loading, onFormSubmit, validate }) => {
             <Grid item xs={12}>
               <Field name="firstName" placeholder="First Name">
                 {({ input, meta }) => (
-                  <TextField
-                    {...input}
-                    fullWidth
-                    label="First Name"
-                    variant="outlined"
-                  />
+                  <TextField {...input} fullWidth label="First Name" variant="outlined" />
                 )}
               </Field>
             </Grid>
@@ -61,12 +51,7 @@ const FeedbackForm = ({ loading, onFormSubmit, validate }) => {
             <Grid item xs={12}>
               <Field label="Interests" name="interests">
                 {({ input, meta }) => (
-                  <TextField
-                    {...input}
-                    fullWidth
-                    label="First Name"
-                    variant="outlined"
-                  />
+                  <TextField {...input} fullWidth label="First Name" variant="outlined" />
                 )}
               </Field>
             </Grid>
@@ -106,9 +91,7 @@ const FeedbackForm = ({ loading, onFormSubmit, validate }) => {
                       rowsMax={6}
                       fullWidth
                       error={Boolean(meta.touched && meta.error)}
-                      helperText={
-                        (meta.touched && meta.error) || 'Enter a short bio'
-                      }
+                      helperText={(meta.touched && meta.error) || 'Enter a short bio'}
                     />
                   </FormControl>
                 )}
@@ -119,9 +102,7 @@ const FeedbackForm = ({ loading, onFormSubmit, validate }) => {
               <Button
                 variant="contained"
                 color="primary"
-                startIcon={
-                  loading ? <LoopIcon className={classes.spin} /> : <SaveIcon />
-                }
+                startIcon={loading ? <LoopIcon className={classes.spin} /> : <SaveIcon />}
                 disabled={loading}
                 type="submit"
               >

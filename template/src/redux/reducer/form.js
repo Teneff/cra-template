@@ -1,9 +1,4 @@
-import {
-  FORM_LOADING,
-  FORM_LOADED,
-  FORM_SUBMITTING,
-  FORM_SUBMITTED,
-} from '../actionTypes';
+import { FORM_LOADING, FORM_LOADED, FORM_SUBMITTING, FORM_SUBMITTED } from '../actionTypes';
 
 const initialState = {
   loading: false,
