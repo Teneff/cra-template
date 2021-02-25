@@ -3,8 +3,10 @@ import { connectRouter } from 'connected-react-router';
 
 import form from './form';
 
-export default (history) =>
+const createRootReducer = (history) =>
   combineReducers({
     router: connectRouter(history),
     form,
   });
+
+export default createRootReducer;
