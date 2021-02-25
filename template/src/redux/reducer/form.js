@@ -4,7 +4,7 @@ const initialState = {
   loading: false,
 };
 
-export default (state = initialState, action) => {
+const form = (state = initialState, action) => {
   switch (action.type) {
     case FORM_LOADING:
       return {
@@ -32,3 +32,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default form;

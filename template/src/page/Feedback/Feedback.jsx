@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Container, makeStyles, CardMedia, Card } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
